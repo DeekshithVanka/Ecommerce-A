@@ -1,5 +1,5 @@
-// server.js
 
+const dotenv=require('dotenv').config()
 const express = require('express');
 const mongoose = require('mongoose');
 const cors=require("cors")
@@ -10,17 +10,17 @@ const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
-const corop={
-    origin:'http://127.0.0.1:5500'
-}
 
-app.use(cors(corop))
+app.use(cors({  origin: '*', 
+methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 
 
 
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://vamshi56vb:5B5uCcCoTS0rxFix@cluster0.oa7njwq.mongodb.net/ecommerce?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect(process.env.MONGODB_URL)
 .then(console.log('Connected to MongoDB'))
 .catch((err)=>{
 console.log(err)
