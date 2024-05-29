@@ -69,10 +69,10 @@ const imgElement = document.createElement('div');
 
  productcard.appendChild(addToCartButton);
 
- console.log("x")
+
 
  productlist.appendChild(productcard);
- console.log("x")
+
                 addToCartButton.addEventListener('click', (event) => {
                   const productId = event.target.dataset.productId;
                   const product = products.find(p => p._id === productId);
