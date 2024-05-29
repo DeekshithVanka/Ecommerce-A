@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const cartItemsContainer = document.getElementById('cart-items');
+    const cartItemsContainer = document.getElementById('maincont');
     const clearCartButton = document.getElementById('clear-cart');
 
     // Load cart items from local storage
@@ -30,13 +30,32 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             cartItemsContainer.innerHTML = '';
             cart.forEach(item => {
+
+                const cartitem = document.createElement('div');
+    cartitem.className = 'cartitem';
+                const imgElement = document.createElement('div');
+    imgElement.className = 'cart-image';
+   
+    const img = document.createElement('img');
+    img.src=`./images/product${item.ide}.jpg`
+    img.alt=item.name
+
+    imgElement.appendChild(img)
+
+
                 const itemElement = document.createElement('div');
                 itemElement.innerHTML = `
                     <h3>${item.name}</h3>
-                    <p>Price: $${item.price}</p>
-                    <button class="remove-from-cart" data-product-id="${item._id}">Remove from Cart</button>
+                    <p> $${item.price}</p>
+                    <button class="remove-from-cart" data-product-id="${item._id}">remove </button>
                 `;
-                cartItemsContainer.appendChild(itemElement);
+              
+                cartitem.appendChild(imgElement);
+                cartitem.appendChild(itemElement);
+                cartItemsContainer.appendChild(cartitem)
+
+
+
             });
         }
     }

@@ -240,6 +240,7 @@ display:none;
     border-radius: 10px;
    
     transition: box-shadow 0.05 linear;
+    margin:10px 0;
    
     overflow: hidden;
   }

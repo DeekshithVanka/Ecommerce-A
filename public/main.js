@@ -39,7 +39,7 @@ const imgElement = document.createElement('div');
     imgElement.className = 'product-image';
    
     const img = document.createElement('img');
-    img.src=`images/product${product.ide}.jpg`
+    img.src=`./images/product${product.ide}.jpg`
     img.alt= product.name
 
     imgElement.appendChild(img)
@@ -79,7 +79,7 @@ const imgElement = document.createElement('div');
                   if (product) {
                       cart.push(product);
                       localStorage.setItem('cart', JSON.stringify(cart));
-                      alert('Product added to cart!');
+                     
                   }
               });
 
