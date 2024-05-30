@@ -1,17 +1,17 @@
   Live  link:  https://ecomtillu.netlify.app
 
-Project setup: 
-1. Backend
-2. Frontend
+  Project setup: 
+  1. Backend
+  2. Frontend
 
-   1.Backend issues<br>
+  1.Backend issues<br>
    (a) CORS issue<br>
    This issue is arised when connecting backend and front end due to browsers policy of not sharing others website information<br>
    It is solve by using cors function provide by express js<br>
    
-  (b) Sever Restart issue<br>
-   whenver any updates are made in server code we need to run the code again<br>
-   To avoid that i have installed a package called nodemon<br>
+   (b) Sever Restart issue<br>
+    whenver any updates are made in server code we need to run the code again<br>
+    To avoid that i have installed a package called nodemon<br>
    
    (c)  node modules issue<br>
    First push of code involving node modules is a big task where this can be downloaded by the package.json<br>
