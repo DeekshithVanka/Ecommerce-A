@@ -4,10 +4,8 @@ Project setup:
 1. Backend
 2. Frontend
 
-   1.Backend involves server(using nodejs and expressjs),database(mongodb)<br>
-   Challanges<br>
-   
-  (a) CORS issue<br>
+   1.Backend issues<br>
+   (a) CORS issue<br>
    This issue is arised when connecting backend and front end due to browsers policy of not sharing others website information<br>
    It is solve by using cors function provide by express js<br>
    
