@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
-    --orange: #ff7800;
+    --orange: 1px solid rgb(255, 12, 12);
     --black: #130f40;
     --light-color: #666;
     --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
@@ -44,7 +44,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:1rem 8%;
+    padding:1rem 7%;
     background:#fff;
     box-shadow: var(--box-shadow);
 }
@@ -84,10 +84,11 @@ font-weight: 600;
   
 }
 
+
 .mid input{
   background-color: whitesmoke;
   padding:8px;
-  width:460px;
+  width:100%;
   border-radius: 20px;
  
 }
@@ -97,14 +98,14 @@ font-weight: 600;
 }
 
 .mid{
-  width:485px;
+  width:45%;
   display: flex;
   justify-content: space-between;
  
 }
 
   .icont{
-    width:22px;
+    width:5%;
     align-self: center;
   }
  
@@ -294,7 +295,7 @@ display:none;
   }
   
   .add-to-cart:hover {
-    background-color:  #2560b9;
+    background-color:  #094bad;
     transform: scale(1.05);
   }
  
@@ -317,8 +318,6 @@ main .hero .area1 {
 
   
 }
-
-
 main .hero .area1 img{
   width:auto;
   height:100%;
@@ -326,11 +325,41 @@ main .hero .area1 img{
   padding-left: 20px;
 }
 .icont label i{
-  font-size: x-large;
- 
-  
-  
+  font-size: x-large;  
 }
+/* cart blink effect    */
+.cart-button i{
+  color:#000000;
+
+}
+
+#carticon.green{
+ 
+ animation-name: blink;
+ animation-iteration-count: 5;
+ animation-duration: 0.4s;
+ padding:3px;
+ border-radius:30px ;
+ 
+}
+@keyframes blink{
+  0%{
+    border-top: 1px solid rgb(223, 23, 23);
+  }
+  25%{
+    border-right:2px solid rgb(0, 0, 0) ;
+  }
+  75%{
+    border-bottom: 3px solid rgb(14, 13, 13);
+  }
+  100%{
+    border-left: 4px solid rgb(27, 227, 114);
+  }
+}
+
+
+
+
 
 
 

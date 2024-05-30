@@ -86,7 +86,7 @@ const logpass = document.getElementById("login-password");
         }
     //  Handle login form submission
     loginForm.addEventListener('submit', async (event) => {
-        console.log("kai kai")
+        
         event.preventDefault();
      
         const emailval = document.getElementById("login-email").value;
@@ -193,7 +193,7 @@ const logpass = document.getElementById("login-password");
     
             //handle sinup form submission
 signupForm.addEventListener('submit', async (event) => {
-            console.log("hhh")
+           
             event.preventDefault();
     //first client side validation is important so check here is imp
    const validateInputs = () => {

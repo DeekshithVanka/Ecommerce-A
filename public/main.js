@@ -74,14 +74,24 @@ const imgElement = document.createElement('div');
  productlist.appendChild(productcard);
 
                 addToCartButton.addEventListener('click', (event) => {
+                  
+                 
                   const productId = event.target.dataset.productId;
                   const product = products.find(p => p._id === productId);
-                  if (product) {
+                  if (product){
                       cart.push(product);
-                      localStorage.setItem('cart', JSON.stringify(cart));
-                     
+                      localStorage.setItem('cart', JSON.stringify(cart));    
                   }
+                 const icon=document.querySelector('#carticon')
+                 
+                 icon.classList.add("green")
+
+                  
+                  setTimeout(()=>{
+                    icon.classList.remove("green")
+                  },500)
               });
+
 
 })
 
