@@ -19,8 +19,8 @@ Project setup:
    First push of code involving node modules is a big task where this can be downloaded by the package.json<br>
    .gitignore is used<br><br>
    
-   2.Frontend issues
-   (a) Product pages issue<br>
+   2.Frontend issues<br>
+   (a) Product pages issue
    whenever the user clicks on the product a new page should open where building each for all products is tideous task<br>
    so whenever product id of the product is extracted and it is dyanamically fetched from the backend<br>
    
